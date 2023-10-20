@@ -20,7 +20,7 @@ def get_text_messages(message):
         btn2 = types.KeyboardButton('Коммунальные услуги🏠')
         btn3 = types.KeyboardButton('Список выполненной работы🪛')
         markup.add(btn1, btn2, btn3)
-        bot.send_message(message.from_user.id, '❓Самое время записать 😌 ', reply_markup=markup) #ответ бота
+        bot.send_message(message.from_user.id, 'Выберите программу 👨🏼‍💻', reply_markup=markup) #ответ бота
 
 
     elif message.text == 'Проверить погоду🌤️':
