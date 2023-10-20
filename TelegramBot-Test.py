@@ -3,7 +3,7 @@ from telebot import types
 
 bot = telebot.TeleBot('6674584002:AAE_K3uIujOA8CBrKgNWd4Va5enq_bhUDTU')
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['Start'])
 def start(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -24,12 +24,12 @@ def get_text_messages(message):
 
 
     elif message.text == 'Проверить погоду🌤️':
-        bot.send_message(message.from_user.id, '*', parse_mode='Markdown')
+        bot.send_message(message.from_user.id, '*Погода*', parse_mode='Markdown')
 
     elif message.text == 'Коммунальные услуги🏠':
-        bot.send_message(message.from_user.id, '*', parse_mode='Markdown')
+        bot.send_message(message.from_user.id, 'Записать/Посмотреть пердыдущие/Посчитать в рублях на данный момент/Редактировать историю', parse_mode='Markdown')
     elif message.text == 'Список выполненной работы🪛':
-        bot.send_message(message.from_user.id, '*', parse_mode='Markdown')
+        bot.send_message(message.from_user.id, 'Записать/Посмотреть список/Редактировать историю', parse_mode='Markdown')
 
 
 bot.polling(none_stop=True, interval=0) #обязательная для работы бота часть!
